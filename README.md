@@ -1,13 +1,13 @@
 # ngp (nicer green pass)
 
 ngp is short for nicer green pass. its a utility tool that reads the QR code of vaccination certificates.
-It then uses the retrived information to generate a small document containing the qr code and the information
-contained within the qr code. 
+It then uses the retrived information to generate a small document containing the QR code and the information
+contained within the QR code. 
 
 This can be used as a handy printout to carry in your wallet.
 
 It may also be interesting for some people to actually see the data 
-within the qr code.
+within the QR code.
 
 If you are interested in further information of how those QR codes work I recommend you to check out:
 
@@ -18,6 +18,8 @@ and
 https://ec.europa.eu/health/sites/default/files/ehealth/docs/covid-certificate_json_specification_en.pdf
 
 
+The application has only been tested with austrian vaccination certificates,
+it _should_ work with any certificate QR code following the EU standard. 
 
 # FAQ
 
