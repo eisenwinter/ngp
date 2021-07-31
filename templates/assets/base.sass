@@ -1,0 +1,45 @@
+@import "minireset"
+@import url('https://fonts.googleapis.com/css?family=Lato|Montserrat')
+$font-base: 'Lato', sans-serif
+$font-headlines: 'Montserrat', sans-serif
+html
+    font-family: $font-base
+    font-size: 16px
+    width: 100%
+@media print
+  @page
+    size: A4
+  body
+    -webkit-print-color-adjust: exact
+    zoom: 50%
+h1,h2
+  font-family: $font-headlines
+  margin: 5px
+
+small
+  font-style: italic
+  font-size: 10px
+table.outer
+  border: 1px solid #eee
+  padding: 1px
+  margin: 10px
+  padding: 10px
+table.inner
+  margin: 5px
+  tr
+    border-bottom: 1px solid #eee
+    td
+      padding: 7px 9px
+  tr:nth-of-type(even)
+    background-color: #eee
+  tr:last-of-type
+    border-bottom: none
+.footnote
+  font-size: 11px
+  color: #999
+  float: right
+  margin: 5px 10px
+
+.qr
+  width: 400px
+  max-width: 400px
