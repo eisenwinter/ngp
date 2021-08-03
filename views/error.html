@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>ngp - nicer green pass</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <style>
+    @import "https://fonts.googleapis.com/css?family=Lato|Montserrat";
+    html,body,p,h1{margin:0;padding:0}h1{font-size:100%;font-weight:400}html{box-sizing:border-box}*,::before,::after{box-sizing:inherit}.mt--medium{margin-top:1rem !important}@media print{@page{size:A4 landscape}.boxed{break-inside:avoid;background-color:#fff!important}}html{box-sizing:border-box}*,:before,:after{box-sizing:inherit}body{background-color:#f9f9f9;font-family:"Lato",sans-serif;min-height:100%;margin:0;font-size:16px;height:100%}.main{background-color:#fff;min-height:100%;position:relative;width:100%;padding:24px}@media screen and (min-width: 769px){.main{max-width:1024px;margin:0 auto}}.main > *{margin-top:0}h1,.like-h4{font-family:"Montserrat",sans-serif;font-weight:400;margin-bottom:1.75rem}h1{font-size:3.2rem;line-height:1.25}@media screen and (max-width: 768px){h1{font-size:3rem;line-height:1.3}}.like-h4{font-size:2rem;line-height:1.5}@media screen and (max-width: 768px){.like-h4{font-size:1.2rem;line-height:1.6}}.boxed{border:1px solid #eee;border-radius:0;box-shadow:none;background-color:#eee;padding:1.5rem}.boxed:not(:last-child){margin-bottom:1.5rem}.boxed.green{color:#fff;background-color:#34AC5E}.boxed.red{color:#fff;background-color:#ee4d4d}.boxed.hero{display:flex;flex-direction:column;align-items:stretch;justify-content:space-between;padding:3rem;border:0;margin:0 auto}@media screen and (min-width: 769px){.boxed.hero{max-width:1024px}}@keyframes fade-in{0%{opacity:0}100%{opacity:1}}@keyframes zoom-exit{0%{opacity:1}50%{opacity:0;transform:scale3d(0.3,0.3,0.3)}100%{opacity:0;height:0;padding:0;margin:0}}
+  </style>
+</head>
+<body>
+    <div class="main boxed hero mt--medium red">
+            <h1 class="like-h4">Oops, da hat etwas nicht geklappt.</h1>
+            <p>{{.Error}}</p>
+    </div>
+</body>
+</html>

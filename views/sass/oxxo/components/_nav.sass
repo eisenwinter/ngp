@@ -1,0 +1,43 @@
+$nav-background-color-mobile: $content-bg !default
+$nav-background-color: $body-bg !default
+$nav-link-color: $font-color !default
+$nav-link-hover-color: $font-color-bright !default
+$nav-height: 49px !default
+nav
+  background-color: $nav-background-color-mobile
+  ul
+    text-align: center
+    list-style-type: none
+    margin: 0
+    li
+      display: block
+      a
+        color: $nav-link-color
+        text-decoration: none
+        &:hover
+          background-color: $nav-link-hover-color
+  +mobile
+    border-bottom: 1px solid #eee
+    margin-bottom: 10px
+    padding-bottom: 15px
+  +desktop
+    overflow: hidden
+    background-color: $nav-background-color
+    position: fixed
+    &.on-top
+      z-index: 999
+      position: sticky
+    top: 0
+    width: 100%
+    height: $nav-height
+    ul
+      text-align: center
+      margin: 0
+      padding: 15px
+      li
+        display: inline
+        a
+          padding: 1.2rem
+body.has-nav
+  +desktop
+    padding-top: $nav-height

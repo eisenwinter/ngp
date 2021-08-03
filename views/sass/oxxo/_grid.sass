@@ -1,0 +1,30 @@
+$grid-gutter: 6px
+.grid
+    margin: -($grid-gutter) 
+    &:not(:last-child)
+        margin-bottom: 24px - $grid-gutter
+    +desktop
+        display: flex
+        flex-wrap: wrap
+    .col
+        display: block
+        flex-basis: 0
+        flex-grow: 1
+        flex-shrink: 1
+        padding: $grid-gutter
+        margin: 0
+        +desktop
+            &.five
+                flex: 0 0 20%
+            &.four 
+                flex: 0 0 25%
+            &.three
+                flex: 0 0 33.3333%
+            &.two
+                flex: 0 0 50%
+            &.three-fourths
+                flex: 0 0 75%
+            &.one
+                flex: 0 0 100%
+        & > *
+            margin: 0

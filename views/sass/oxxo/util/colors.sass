@@ -1,0 +1,51 @@
+/*
+  ===============================
+  oxxopus colors
+  2017-11-08 / jc
+  mit licensed
+  https://github.com/eisenwinter/oxxopuscss
+  ===============================
+  this are the colors used
+  ===============================*/
+
+//page background
+$body-bg: #f9f9f9 !default
+
+//primary color to be used
+$primary: #ee4d4d !default
+
+//here any color you want to use can be defined
+$blue: #5bc0de !default
+$green: #34AC5E !default
+$red: #ee4d4d !default
+
+//color to use for validation errors
+$error-color: $red !default
+
+//basic font color
+$font-color: #777 !default
+
+//basic font color bright
+$font-color-bright: #fff !default
+//basic font color dark
+$font-color-dark: $font-color !default
+
+//creates the font colors for the defined colors, there could be also set using a static color
+$primary-font-color: fontColorFor($primary,$font-color-dark, $font-color-bright) !default
+$blue-font-color: fontColorFor($blue,$font-color-dark, $font-color-bright) !default
+$green-font-color: fontColorFor($green,$font-color-dark, $font-color-bright) !default
+$red-font-color: fontColorFor($red,$font-color-dark, $font-color-bright) !default
+
+//default border color
+$default-border-color: #eee !default
+//default color of any boxed content
+$boxed-background: #eee !default
+
+//normal content background
+$content-bg: #fff !default
+
+$shadow-color: rgba(0,0,0,0.5) !default
+$shadow-settings: 5px 5px 0px 0px !default
+
+//any color changes need to be added ("name" and "color,textcolor") and/or removed here, they will become automatically availble
+$palette: ("blue": ($blue,$blue-font-color), "green": ($green,$green-font-color), "red": ($red,$red-font-color))

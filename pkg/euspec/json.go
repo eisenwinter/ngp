@@ -69,6 +69,7 @@ type EuValueSet struct {
 }
 
 func init() {
+	message.SetString(language.English, "Surname(s), Forename(s)", "Surname(s), Forename(s)")
 	message.SetString(language.German, "Surname(s), Forename(s)", "Nachname(n), Vorname(n)")
 	message.SetString(language.German, "Date of birth (yyyy-mm-dd)", "Geburtsdatum (JJJJ-MM-TT)")
 	message.SetString(language.German, "Disease or agent targeted", "Zielkrankheit oder -erreger")
@@ -107,7 +108,8 @@ func ToRenderView(json EuJsonPayload, qrSource string, lang string) template.Ren
 		fmt.Println("Failed to load value set")
 	}
 
-	p := message.NewPrinter(message.MatchLanguage("de", "en"))
+	parsedLang := message.MatchLanguage(lang)
+	p := message.NewPrinter(parsedLang)
 	view.QrSource = qrSource
 	view.Infos = make([]template.DetailView, 0)
 	view.Infos = append(view.Infos, template.DetailView{

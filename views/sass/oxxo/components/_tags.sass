@@ -1,0 +1,24 @@
+ul.tags
+  padding-left: 0
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  justify-content: flex-start
+  li
+    display: inline-flex
+    color: $font-color
+    background-color: $boxed-background
+    font-size: $font-size*1.1
+    font-weight: 500
+    margin-bottom: 0.4rem
+    padding: 0.5rem
+    &:not(:last-child)
+      margin-right: 0.4rem
+    &:last-child
+      margin-right: 0
+    +variations
+    .remove
+        background-color: transparent
+        margin: 0
+        padding: 0
+        margin-left: 0.25rem

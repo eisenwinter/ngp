@@ -16,7 +16,7 @@ import (
 )
 
 func main() {
-	var fileFlag = flag.String("file", "", "specify a text file to be read from")
+	var fileFlag = flag.String("f", "", "specify a text file to be read from")
 	flag.Parse()
 	if fileFlag != nil && *fileFlag != "" {
 		file, err := loadFile(*fileFlag)

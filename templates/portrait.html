@@ -1,0 +1,35 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>@import "https://fonts.googleapis.com/css?family=Lato|Montserrat";html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:400}ul{list-style:none}button,input,select,textarea{margin:0}html{box-sizing:border-box}*,::before,::after{box-sizing:inherit}img,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}td:not([align]),th:not([align]){text-align:inherit}html{font-family:"Lato",sans-serif;font-size:16px;width:100%}@media print{@page{size:A4}}h1,h2{font-family:"Montserrat",sans-serif;margin:5px;font-size:14px}small{font-style:italic;font-size:10px}.footnote{font-size:11px;color:#999}.qr{width:400px;max-width:400px}.box{margin:5px;padding:15px;border:1px solid #eee;width:430px}.details{padding:5px}hr{margin:5px 0;border:2px solid #eee}</style>
+</head>
+
+<body>
+    <div class="box">
+        <img class="qr" src="{{QrSource}}">
+
+        <h1>{{Id}}</h1>
+        <h2>{{Issuer}}</h2>
+        <div class="details">
+            <hr>
+            {{#Infos}}
+            <strong>{{Display}}</strong> <br>
+            {{Value}}  <small>{{Detail}}</small>
+            <hr>
+            {{/Infos}}
+        </div>
+        <span class="footnote">ngp (nicergreenpass) - https://ngp.subkonstrukt.at - github.com/eisenwinter/ngp</span>
+        </td>
+        </tr>
+    </div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+=mobile
+  @media screen and (max-width: $mobile-break-point)
+    @content
+
+=desktop
+  @media screen and (min-width: $mobile-break-point + 1px)
+    @content
+
+=stackable
+  &:not(:last-child)
+    margin-bottom: 1.5rem
+
+=variations
+  &.primary
+    background-color: $primary
+    color: $primary-font-color
+  @each $name, $colors in $palette
+    &.#{$name}
+      color: nth($colors,2)
+      background-color: nth($colors,1)
+
+=extend-variations
+  &.primary:hover
+    background-color: lighten($primary, 10%)
+  &.primary:focus
+    border-color: darken($default-border-color, 25%)
+  &.primary:active
+    background-color: darken($primary, 5%)
+  @each $name, $colors in $palette
+    &.#{$name}:hover
+      background-color: lighten(nth($colors,1), 10%)
+    &.#{$name}:focus
+      border-color: darken($default-border-color, 25%)
+    &.#{$name}:active
+      background-color: darken(nth($colors,1), 5%)
+
+=border
+  border: $default-border
+  border-radius: $default-border-radius
+  box-shadow: $shadow
+
+=shadow
+  &.shadow
+    -webkit-box-shadow: $shadow-settings $shadow-color
+    -moz-box-shadow: $shadow-settings $shadow-color
+    box-shadow: $shadow-settings $shadow-color

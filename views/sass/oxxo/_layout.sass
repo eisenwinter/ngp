@@ -1,0 +1,67 @@
+$content-max-width: 1024px !default
+$toppen-main-color: $primary !default
+html
+	box-sizing: border-box
+*, *:before, *:after
+	box-sizing: inherit
+body
+	background-color: $body-bg
+	font-family: $font-base
+	min-height: 100%
+	margin: 0
+	font-size: $font-size
+	height: 100%
+a
+	color: $primary
+.main, .section
+	background-color: $content-bg
+	min-height: 100%
+	position: relative
+	width: 100%
+	padding: 24px
+	+desktop
+		max-width: $content-max-width
+		margin: 0 auto
+	& > *
+		margin-top: 0
+	&.border
+		+border
+	&.topped
+		margin-top: 1.5rem
+		border-top: 2px solid $toppen-main-color
+		&.fat
+			border-width: 6px
+
+.section
+	+shadow
+	+desktop
+		margin: 0 auto 1.5rem auto 	
+figure
+	margin: 0.4rem
+
+hr
+	position: relative
+	line-height: 1rem
+	outline: 0
+	border: 0
+	color: black
+	text-align: center
+	height: 1.5rem
+	&:before
+		content: ""
+		background: $default-border-color
+		position: absolute
+		left: 0
+		top: 45%
+		width: 100%
+		height: 4px
+	&:after
+		content: attr(data-text)
+		position: relative
+		display: inline-block
+		padding: 0 .5em
+		line-height: 1.5rem
+		color: $font-color
+		background-color: $default-border-color
+	&.left-algined:after
+		left: -45%

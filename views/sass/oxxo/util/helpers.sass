@@ -1,0 +1,62 @@
+.no-ident
+  margin-left: 0 !important
+  padding-left: 0 !important
+.no-mb
+  margin-bottom: 0 !important
+.m-0-auto
+  margin: 0 auto
+.mt--small
+  margin-top: 0.5rem !important
+.mt--medium
+  margin-top: 1rem !important
+.mt--large
+  margin-top: 1.5rem !important
+.mb--small
+  margin-bottom: 0.5rem !important
+.mb--medium
+  margin-bottom: 1rem !important
+.mb--large
+  margin-bottom: 1.5rem !important
+.is-fullsize
+  width: 100% !important
+.block-space
+  margin-bottom: 1.5rem
+.stretch
+  width: 100%
+  height: 100%
+.float-right
+  float: right
+.full-stretch
+  min-width: 100% !important
+  min-height: 100% !important
+.center-t
+  text-align: center
+.right-t
+  text-align: right
+.center-t-m
+  +mobile
+    text-align: center
+.right-t-m
+  +mobile
+    text-align: right
+.mobile
+  +desktop
+    display: none !important
+.desktop
+  +mobile
+    display: none !important
+.hide
+  display: none !important
+.hidden
+  visibility: hidden !important
+.text-primary
+  color: $primary
+@each $name, $colors in $palette
+  .text-#{$name}
+    color: nth($colors,1)
+.no-mb-mobile
+  +mobile
+    margin-bottom: 0 !important
+.no-mt-mobile
+  +mobile
+    margin-top: 0 !important

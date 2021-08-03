@@ -21,13 +21,14 @@ func main() {
 	var fileFlag = flag.String("f", "", "specify a text file to be read from")
 	var templateFlag = flag.String("t", "", "specify a template file to be read from")
 	var outFlag = flag.String("o", "out.html", "name of output file")
+	var lang = flag.String("lang", "en", "language to use (available: en, de)")
 	flag.Parse()
 	if fileFlag != nil && *fileFlag != "" && templateFlag != nil && *templateFlag != "" {
 		file, err := loadFile(*fileFlag)
 		if err != nil {
 			panic(err)
 		}
-		res, err := generate(file, fileAsBase64(*fileFlag), *templateFlag)
+		res, err := generate(file, fileAsBase64(*fileFlag), *templateFlag, *lang)
 		if err != nil {
 			panic(err)
 		}
@@ -75,13 +76,13 @@ func loadFile(path string) (string, error) {
 	return result.String(), nil
 }
 
-func generate(input string, qr string, templatePath string) (string, error) {
+func generate(input string, qr string, templatePath string, lang string) (string, error) {
 	gp := greenpass.New()
 	result, err := gp.Decode([]byte(input))
 	if err != nil {
 		panic(err)
 	}
-	view := euspec.ToRenderView(*result, "data:image/png;base64,"+qr, "de")
+	view := euspec.ToRenderView(*result, "data:image/png;base64,"+qr, lang)
 	tr := template.New()
 	return tr.Render(templatePath, view)
 }

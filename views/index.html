@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>ngp - nicer green pass</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <style>
+   html,body,p,ul,li,h1,h2,h3{margin:0;padding:0}h1,h2,h3{font-size:100%;font-weight:400}ul{list-style:none}button,input,select{margin:0}html{box-sizing:border-box}*,::before,::after{box-sizing:inherit}.block-space{margin-bottom:1.5rem}.center-t{text-align:center}.text-blue{color:#5bc0de}@media screen and (max-width: 768px){.no-mb-mobile{margin-bottom:0!important}}@media print{@page{size:A4 landscape}nav{display:none}.boxed{break-inside:avoid;background-color:#fff!important}}.flex{display:flex}.flex.center-v{align-items:center}.flex.center-h{justify-content:center}html{box-sizing:border-box}*,:before,:after{box-sizing:inherit}body{background-color:#f9f9f9;font-family:"Lato",sans-serif;min-height:100%;margin:0;font-size:16px;height:100%}a{color:#ee4d4d}.main,.section{background-color:#fff;min-height:100%;position:relative;width:100%;padding:24px}@media screen and (min-width: 769px){.main,.section{max-width:1024px;margin:0 auto}}.main > *,.section > *{margin-top:0}@media screen and (min-width: 769px){.section{margin:0 auto 1.5rem}}h1,h2,h3,.like-h3,.like-h4,.like-h5{font-family:"Montserrat",sans-serif;font-weight:400;margin-bottom:1.75rem}h1{font-size:3.2rem;line-height:1.25}@media screen and (max-width: 768px){h1{font-size:3rem;line-height:1.3}}h2{font-size:3rem;line-height:1.3}@media screen and (max-width: 768px){h2{font-size:2.4rem;line-height:1.35}}h3,.like-h3{font-size:2.4rem;line-height:1.35}@media screen and (max-width: 768px){h3,.like-h3{font-size:1.9rem;line-height:1.5}}.like-h4{font-size:2rem;line-height:1.5}@media screen and (max-width: 768px){.like-h4{font-size:1.2rem;line-height:1.6}}.like-h5{font-size:1.5rem;line-height:1.6}@media screen and (max-width: 768px){.like-h5{font:Lato,sans-serif;font-weight:700;font-size:1.1rem}}.grid{margin:-6px}.grid:not(:last-child){margin-bottom:18px}@media screen and (min-width: 769px){.grid{display:flex;flex-wrap:wrap}}.grid .col{display:block;flex-basis:0;flex-grow:1;flex-shrink:1;padding:6px;margin:0}.grid .col > *{margin:0}select{border:1px solid #eee;border-radius:0;box-shadow:none;height:38px;padding:6px 10px;box-sizing:border-box;background-color:#eee}.boxed select{background-color:#fff}select:focus{border-color:#d5d5d5;outline:0}label{display:block;margin:.5rem 0;font-weight:500}label.for-radio{display:inline}input[type=radio]{display:inline}button,.button{display:inline-block;box-sizing:border-box;font-weight:600;line-height:17.6px;white-space:nowrap;cursor:pointer;outline:0;background-color:#eee;padding:.5rem;margin-top:.5rem;text-decoration:none;border:1px solid #eee;border-radius:0;box-shadow:none}button:not(:last-child),.button:not(:last-child){margin-bottom:1.5rem}button.blue,.button.blue{color:#fff;background-color:#5bc0de}button.green,.button.green{color:#fff;background-color:#34AC5E}button.red,.button.red{color:#fff;background-color:#ee4d4d}button.blue:hover,.button.blue:hover{background-color:#85d0e7}button.blue:focus,.button.blue:focus{border-color:#aeaeae}button.blue:active,.button.blue:active{background-color:#46b8da}button.green:hover,.button.green:hover{background-color:#4bc877}button.green:focus,.button.green:focus{border-color:#aeaeae}button.green:active,.button.green:active{background-color:#2e9853}button.red:hover,.button.red:hover{background-color:#f27c7c}button.red:focus,.button.red:focus{border-color:#aeaeae}button.red:active,.button.red:active{background-color:#ec3636}button a,.button a{text-decoration:none}.grid .form-col{display:flex;justify-content:stretch;align-items:baseline}.grid .form-col label{margin-right:.7rem}@media screen and (min-width: 769px){.grid .form-col{justify-content:space-around;align-items:center;flex-wrap:wrap;margin-right:0}.grid .form-col.down{align-items:flex-end}.grid .form-col label{margin-bottom:.7rem;flex-basis:100%;text-align:center}.grid .form-col label.for-radio{margin-bottom:0;flex-basis:0}}.notification{border:1px solid #eee;border-radius:0;box-shadow:none;background-color:#eee;padding:1.5rem}.notification:not(:last-child){margin-bottom:1.5rem}.notification.blue{color:#fff;background-color:#5bc0de}.notification.green{color:#fff;background-color:#34AC5E}.notification.red{color:#fff;background-color:#ee4d4d}.boxed{border:1px solid #eee;border-radius:0;box-shadow:none;background-color:#eee;padding:1.5rem}.boxed:not(:last-child){margin-bottom:1.5rem}.boxed.blue{color:#fff;background-color:#5bc0de}.boxed.green{color:#fff;background-color:#34AC5E}.boxed.red{color:#fff;background-color:#ee4d4d}nav{background-color:#fff}nav ul{text-align:center;list-style-type:none;margin:0}nav ul li{display:block}nav ul li a{color:#777;text-decoration:none}nav ul li a:hover{background-color:#fff}@media screen and (max-width: 768px){nav{border-bottom:1px solid #eee;margin-bottom:10px;padding-bottom:15px}}@media screen and (min-width: 769px){nav{overflow:hidden;background-color:#f9f9f9;position:fixed;top:0;width:100%;height:49px}nav ul{text-align:center;margin:0;padding:15px}nav ul li{display:inline}nav ul li a{padding:1.2rem}}@media screen and (min-width: 769px){body.has-nav{padding-top:49px}}.fade-in{animation-name:fade-in;animation-fill-mode:both;animation-duration:.5s}@keyframes fade-in{0%{opacity:0}100%{opacity:1}}@keyframes zoom-exit{0%{opacity:1}50%{opacity:0;transform:scale3d(0.3,0.3,0.3)}100%{opacity:0;height:0;padding:0;margin:0}}.animation-cascade-1--slow{animation-duration:.5s}.animation-cascade-2--slow{animation-duration:1s}.animation-cascade-3--slow{animation-duration:1.5s}
+  </style>
+</head>
+
+<body class="has-nav">
+  <nav>
+    <ul>
+      <li><a>NGP</a></li>
+      <li><a href="#main">Generieren</a></li>
+      <li><a href="#info">FAQ</a></li>
+      <li><a href="#os">Quellcode</a></li>
+    </ul>
+  </nav>
+
+  <section class="section fade-in animation-cascade-1--slow" id="main">
+    <h1 class="flex center-h center-v center-t like-h3 no-mb-mobile">
+      NGP
+    </h1>
+    <h2 class="flex center-h center-v center-t like-h4">
+
+    </h2>
+    <p class="block-space">
+      ngp generiert aus dem QR code des Impfzertifkates einen kleinen Zettel, welcher den QR Code und die darin
+      enthaltenen Daten beinhaltet.
+      Dieser ist kaum größer als eine Euro-Bank Note und kann komfortabel im Geldbeutel mitgeführt werden. <br>
+      Dieses Projekt ist für all jene die entweder interessiert was sich hinter dem QR an Daten verbirgt oder diesen praktischen Zettel möchten.
+    </p>
+    <div class="boxed">
+      <h3 class="like-h5 flex center-h center-v">ngp generieren</h3>
+      <form method="post" action="/gen" enctype="multipart/form-data" target="_blank" class="block-space">
+        <div class="grid">
+          <div class="col form-col">
+            <label>QR Code wählen</label>
+            <input name="qr" required type="file" accept="image/png">
+
+          </div>
+          <div class="col form-col">
+            <label>Sprache</label>
+            <input type="radio" checked id="lang_de" name="lang" value="de">
+            <label class="for-radio" for="lang_de">Deutsch</label>
+            &nbsp;
+            <input type="radio" id="lang_en" name="lang" value="en">
+            <label class="for-radio" for="lang_en">English</label>
+          </div>
+          <div class="col form-col">
+            <label for="format">Format</label>
+            <select name="format" id="format">
+              <option value="default" selected>Querformat</option>
+              <option value="portrait">Hochformat</option>
+            </select>
+          </div>
+          <div class="col form-col down">
+            <button type="submit" class="button blue">Generieren</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+
+    <div class="notification red">
+      <strong class="like-h5">Achtung!</strong>
+      <p>Prinzipiell beinhaltet der QR Code sensible Gesundheitsdaten und sollte nicht einfach im Internet hergegeben
+        werden.</p>
+      <p>
+        Die hochgeladenen Daten werden nicht gespeichert und ausschließlich einmal gelesen, um den "ngp" zu generieren.
+        Sollte trotzdem Misstrauen bestehen kann die Anwendung auch lokal geladen werden, um die Datenhoheit zu
+        behalten.
+        Mehr dazu in der Sektion <a class="text-blue" href="#os">Open Source.</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="section fade-in animation-cascade-2--slow" id="info">
+    <h2 class="flex center-h center-v center-t like-h3 no-mb-mobile">
+      FAQ
+    </h2>
+    <h3 class="flex center-h center-v center-t like-h4">
+      Frequently Asked Questions
+    </h3>
+    <div class="block-space">
+      <div class="block-space">
+        <strong>Warum überhaupt?</strong>
+        <p>Einerseits war's Interesse, was tatsächlich in dem QR Code steht, andererseits hat mich gestört, wie groß das
+          ausgestellte PDF war (A4). Auch wenn es heißt, der QR Code alleine ist genug, werden stets nur die
+          tabellarischen Daten geprüft - also sollten diese auch ersichtlich sein.</p>
+      </div>
+      <div class="block-space">
+        <strong>Funktioniert das mit allen europäischen Impfzertifikaten?</strong>
+        <p>Theoretisch ja, getestet ist es aber nur mit Österreichischen.</p>
+      </div>
+      <div class="block-space">
+        <strong>Kann die Anwendung die Signatur prüfen?</strong>
+        <p>Nein, das kann nur der Aussteller (in Österreich das Gesundheitsministerium) und ist nur durch den
+          offiziellen Scanner geprüft werden.</p>
+      </div>
+      <div class="block-space">
+        <strong>Ist das ein offizielles Dokument?</strong>
+        <p>
+          <strong>Nein.</strong>
+          Das ganze ist ein Hobby Projekt, es ist kein offizielles Dokument. Das erzeuge Dokumente besteht lediglich aus
+          den Daten des offiziellen QR Code des Impfzertifkates.
+        </p>
+      </div>
+      <div class="block-space">
+        <strong>Wird das Dokument akzeptiert?</strong>
+        <p>
+          Prinzipiell sollte eigentlich der QR Code ausreichen, dieser wird unmodifiziert auf das Dokument gedruckt und
+          verliert damit so nicht seine Gültigkeit.
+          <br>Ob es in der Realität in Gasthäusern oder Sportstätten akzeptiert wird, kann ich nicht garantieren.
+        </p>
+      </div>
+      <div class="block-space">
+        <strong>Kann ich hiermit ein Dokument mit falschen Daten generieren?</strong>
+        <p>
+          <strong>Nein.</strong> Selbst wenn Sie einen gefälschten QR Code erzeugen könnten, so würde dies beim Scannen
+          mit dem offiziellen Scanner erkannt werden.
+        </p>
+      </div>
+      <div class="block-space">
+        <strong>Was bedeutet die lange Zeichenkette auf dem Dokument?</strong>
+        <p>
+          Das ist die eindeutige Kennung des Zertifikates.
+        </p>
+      </div>
+  </section>
+
+  <section class="section fade-in animation-cascade-3--slow" id="os">
+    <h2 class="flex center-h center-v center-t like-h3 no-mb-mobile">
+      Open Source
+    </h2>
+    <p class="block-space">
+      Das gesamte Projekt ist Open Source unter der BSD 2-Clause Lizenz und kann frei genutzt und weiterentwickelt
+      werden. <br>
+      Der Quellcode und alle Anleitungen ist unter <a
+        href="https://github.com/eisenwinter/ngp">https://github.com/eisenwinter/ngp</a> zu finden.
+    </p>
+  </section>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+$list: "input[type='email']", "input[type='number']", "input[type='search']", "input[type='text']", "input[type='text' i]", "input[type='tel']", "input[type='url']", "input[type='password']","input[type='datetime']","input[type='datetime-local']","textarea", "select"
+
+@each $input in $list
+  #{$input}
+    +border
+    +shadow
+    height: 38px
+    padding: 6px 10px // px because ff glitch
+    box-sizing: border-box
+    background-color: $boxed-background
+    .boxed &
+      background-color: $content-bg
+  #{$input}:focus
+    border-color: darken($default-border-color, 10%)
+    outline : 0
+
+  #{$input}.error, form .error #{$input}
+    border-color: $error-color
+
+
+textarea
+  min-height: 60px
+  min-width: 194px
+  padding: 10px 6px
+
+label, legend
+  display: block
+  margin: 0.5rem 0
+  font-weight: 500
+  &.for-checkbox,&.for-radio
+    display: inline
+fieldset
+  padding: 0
+  border: 0
+
+input[type="checkbox"], input[type="radio"]
+  display: inline
+
+button, .button
+  display: inline-block
+  box-sizing: border-box
+  font-weight: 600
+  line-height: $font-size*1.1
+  white-space: nowrap
+  cursor: pointer
+  outline: 0
+  background-color: $boxed-background
+  padding: 0.5rem
+  margin-top: 0.5rem
+  text-decoration: none
+  +stackable
+  +border
+  +variations
+  +extend-variations
+  & a
+    text-decoration: none
+  & .icon
+    display: inline-block
+    margin: 0 3px
+
+form .error label, label.error
+  color: $error-color
+
+@each $input in $list
+  #{$input}.fullwidth
+    width: 100%
+
+.grid .form-col
+  display: flex
+  justify-content: stretch
+  align-items: baseline
+  label
+    margin-right: 0.7rem
+  +desktop
+    justify-content: space-around
+    align-items: center
+    flex-wrap: wrap
+    margin-right: 0
+    &.down
+      align-items: flex-end
+    label
+      margin-bottom: 0.7rem
+      flex-basis: 100%
+      text-align: center
+      &.for-radio, &.for-checkbox
+        margin-bottom: 0
+        flex-basis: 0

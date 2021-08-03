@@ -1,0 +1,11 @@
+.stacked
+  +stackable
+  &:not(.grid)
+    display: block
+    padding: 0.65rem
+  &.grid
+    margin: 0px
+  & > *:nth-child(odd)
+    border-left: 4px solid $primary
+  & > *:nth-child(even)
+    border-left: 4px solid $default-border-color

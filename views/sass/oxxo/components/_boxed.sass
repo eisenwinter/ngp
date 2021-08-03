@@ -1,0 +1,39 @@
+$boxed-padding: 1.5rem !default
+$hero-padding: 3rem !default
+.boxed
+  +stackable
+  +border
+  background-color: $boxed-background
+  padding: 1.5rem
+  +variations
+  +shadow
+  &.half
+    +mobile
+      margin: 3rem
+    +desktop
+      width: 50%
+      margin: 0 auto
+  &.spaced
+    +desktop
+      margin: 40px auto
+  &.borderless
+    border: 0
+  &.transparent
+    border: 0
+    background-color: transparent
+  &.hero
+    display: flex
+    flex-direction: column
+    align-items: stretch
+    justify-content: space-between
+    padding: $hero-padding
+    border: 0
+    margin: 0 auto
+    +desktop
+      max-width: $content-max-width
+    & .top
+      flex-grow: 1
+      flex-shrink: 0
+    & .bottom
+      flex-grow: 0
+      flex-shrink: 0

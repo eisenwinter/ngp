@@ -46,6 +46,27 @@ austrian vaccination certificate is a A4 paper containing information that could
 While they state the QR code is just enough most places just check the tabular information containing
 and dont bother scanning the QR code so it had to be placed on their as well.
 
+# Running generation
+
+If you just want to generate the HTML file you can use:
+
+```
+go run cmd\generate\generate.go -f qr.png -t templates\default.html -o mynpg.html -lang de
+``` 
+
+-lang is the language (either de or en)
+-f defines the qr code location (as png)
+-o sets the output path name
+
+If you are just curious whats inside the qr code you can use:
+
+```
+go run cmd\read\read.go -f ..\path-to-qr\qr.png 
+``` 
+
+and it will just output the struct to stdin
+
+
 # Contribution
 
 Contributions are welcome, altough this is just a hobby project.
