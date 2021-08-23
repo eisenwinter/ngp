@@ -3,19 +3,26 @@ $nav-background-color: $body-bg !default
 $nav-link-color: $font-color !default
 $nav-link-hover-color: $font-color-bright !default
 $nav-height: 49px !default
-nav
+
+.nav
   background-color: $nav-background-color-mobile
   ul
-    text-align: center
     list-style-type: none
     margin: 0
     li
       display: block
+      padding: 0.3rem 1rem
+      &:first-child
+        padding-top: 0.8rem
       a
         color: $nav-link-color
         text-decoration: none
-        &:hover
-          background-color: $nav-link-hover-color
+      &.is-home
+        text-align: center
+      &:hover
+        background-color: $nav-link-hover-color
+        &.is-home
+          background-color: transparent
   +mobile
     border-bottom: 1px solid #eee
     margin-bottom: 10px
@@ -34,10 +41,10 @@ nav
       text-align: center
       margin: 0
       padding: 15px
-      li
+      li, li:first-child
         display: inline
-        a
-          padding: 1.2rem
+        padding: 1.2rem
 body.has-nav
   +desktop
     padding-top: $nav-height
+

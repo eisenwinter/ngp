@@ -19,6 +19,16 @@
       color: nth($colors,2)
       background-color: nth($colors,1)
 
+@mixin variation-selectors($parent, $selectors...)
+  @for $i from 0 to length($selectors)
+    #{$parent}.primary #{nth($selectors, $i + 1)}
+      background-color: $primary
+      color: $primary-font-color
+    @each $name, $colors in $palette
+      #{$parent}.#{$name} #{nth($selectors, $i + 1)}
+        color: nth($colors,2)
+        background-color: nth($colors,1)
+
 =extend-variations
   &.primary:hover
     background-color: lighten($primary, 10%)
@@ -33,6 +43,23 @@
       border-color: darken($default-border-color, 25%)
     &.#{$name}:active
       background-color: darken(nth($colors,1), 5%)
+
+=light-dark
+  &.is-light
+    background-color: $content-bg
+    color: $font-color-dark
+  &.is-dark
+    background-color: $content-bg-dark
+    color: $font-color-bright
+
+@mixin light-dark-selectors($selectors...)
+  @for $i from 0 to length($selectors)
+    &.is-light #{nth($selectors, $i + 1)}
+      background-color: $content-bg
+      color: $font-color-dark
+    &.is-dark #{nth($selectors, $i + 1)}
+      background-color: $content-bg-dark
+      color: $font-color-bright
 
 =border
   border: $default-border

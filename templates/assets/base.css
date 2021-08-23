@@ -1,1 +1,143 @@
-@import"https://fonts.googleapis.com/css?family=Lato|Montserrat";/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}ul{list-style:none}button,input,select,textarea{margin:0}html{box-sizing:border-box}*,*::before,*::after{box-sizing:inherit}img,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}td:not([align]),th:not([align]){text-align:inherit}html{font-family:"Lato",sans-serif;font-size:16px;width:100%}@media print{@page{size:A4}body{-webkit-print-color-adjust:exact;zoom:50%}}h1,h2{font-family:"Montserrat",sans-serif;margin:5px}small{font-style:italic;font-size:10px}table.outer{border:1px solid #eee;padding:1px;margin:10px;padding:10px}table.inner{margin:5px}table.inner tr{border-bottom:1px solid #eee}table.inner tr td{padding:7px 9px}table.inner tr:nth-of-type(even){background-color:#eee}table.inner tr:last-of-type{border-bottom:none}.footnote{font-size:11px;color:#999;float:right;margin:5px 10px}.qr{width:400px;max-width:400px}/*# sourceMappingURL=base.css.map */
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+@import url("https://fonts.googleapis.com/css?family=Lato|Montserrat");
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+td:not([align]),
+th:not([align]) {
+  text-align: inherit;
+}
+
+html {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  width: 100%;
+}
+
+@media print {
+  @page {
+    size: A4;
+  }
+  body {
+    -webkit-print-color-adjust: exact;
+    zoom: 50%;
+  }
+}
+h1, h2 {
+  font-family: "Montserrat", sans-serif;
+  margin: 5px;
+}
+
+small {
+  font-style: italic;
+  font-size: 10px;
+}
+
+table.outer {
+  border: 1px solid #eee;
+  padding: 1px;
+  margin: 10px;
+  padding: 10px;
+}
+
+table.inner {
+  margin: 5px;
+}
+table.inner tr {
+  border-bottom: 1px solid #eee;
+}
+table.inner tr td {
+  padding: 7px 9px;
+}
+table.inner tr:nth-of-type(even) {
+  background-color: #eee;
+}
+table.inner tr:last-of-type {
+  border-bottom: none;
+}
+
+.footnote {
+  font-size: 11px;
+  color: #999;
+  float: right;
+  margin: 5px 10px;
+}
+
+.qr {
+  width: 400px;
+  max-width: 400px;
+}
+
+/*# sourceMappingURL=base.css.map */

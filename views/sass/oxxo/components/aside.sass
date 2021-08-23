@@ -1,0 +1,44 @@
+$aside-background: $content-bg-dark
+$aside-text-color: $font-color-bright
+$aside-footer-background: darken($content-bg-dark, 10%)
+$aside-header-background: darken($content-bg-dark, 10%)
+$aside-hover-color: lighten($content-bg-dark, 10%)
+
+.has-aside
+  +desktop
+    display: flex
+    flex-wrap: wrap
+  .aside
+    background-color: $aside-background
+    color:  $font-color-bright
+    +light-dark
+    display: flex
+    flex-direction: column
+    flex-basis: 0
+    flex-grow: 1
+    flex-shrink: 1
+    +desktop
+      width: 25%
+    @media screen and (min-width: ($mobile-break-point + 1px) * 2)
+      width: 16.6%
+      flex: none
+      max-width: 450px
+    & ul.aside-nav
+      list-style: none
+      padding: 0.75rem
+      line-height: 1.25
+      flex-grow: 1
+      & li
+        padding: 0.75rem 
+      & li:hover
+        background-color: $aside-hover-color
+    .aside-header, .aside-footer
+      padding: 1rem 1.5rem
+    .aside-header
+      background-color: $aside-header-background
+    .aside-footer
+      background-color: $aside-footer-background
+
+  .aside-content
+    margin: 0
+    flex-grow: 1

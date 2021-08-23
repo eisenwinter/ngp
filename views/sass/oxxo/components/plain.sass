@@ -1,0 +1,65 @@
+.plain
+	@for $i from 1 through 5
+		h#{$i}
+			font-size: (6-$i*0.5) - ($font-size * 2)
+			line-height: 1.25
+			letter-spacing: 0
+			+mobile
+				font-size: (6-$i*0.5) - ($font-size * 2.5)
+	p
+		margin-top: 0
+
+	a
+		color: $primary
+		&:hover
+			color: lighten($primary, 10%)
+
+	ul, ol
+		padding-left: 0
+		margin-left: 0
+		& ul, ol
+			margin: 1.5rem
+	ol
+		list-style: decimal-leading-zero inside
+
+	ul
+		list-style: circle inside
+
+	li
+		margin-bottom: 0.75rem
+
+	code
+		padding: .5rem
+		font-size: $font-size * 0.9
+		white-space: nowrap
+		border-top: $default-border
+		border-bottom: $default-border
+		font-family: $font-monospace
+
+	pre code
+		display: block
+		white-space: pre
+
+	pre,blockquote,dl,figure,table,p,ul,ol,form
+		margin-bottom: 2rem
+
+	hr
+		margin-top: 2rem
+		margin-bottom: 2.5rem
+		border-width: 0
+		border-top: $default-border
+		&:before
+			content: none
+		&:after
+			content: none
+
+	table
+		width: 100%
+	th, td
+		padding: 1rem 1.2rem
+		text-align: left
+		border-bottom: $default-border
+		&:first-child
+			padding-left: 0
+		&:last-child
+			padding-right: 0

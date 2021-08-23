@@ -1,5 +1,20 @@
 $list: "input[type='email']", "input[type='number']", "input[type='search']", "input[type='text']", "input[type='text' i]", "input[type='tel']", "input[type='url']", "input[type='password']","input[type='datetime']","input[type='datetime-local']","textarea", "select"
 
+.input
+  +border
+  +shadow
+  height: 38px
+  padding: 6px 10px // px because ff glitch
+  box-sizing: border-box
+  background-color: $boxed-background
+  .boxed &
+    background-color: $content-bg
+.input:focus
+  border-color: darken($default-border-color, 10%)
+  outline : 0
+.input.error, form .error .input
+    border-color: $error-color
+
 @each $input in $list
   #{$input}
     +border
@@ -65,23 +80,35 @@ form .error label, label.error
   #{$input}.fullwidth
     width: 100%
 
-.grid .form-col
+.form-col
   display: flex
   justify-content: stretch
   align-items: baseline
-  label
-    margin-right: 0.7rem
+  align-content: center
+  flex-direction: column
+  padding: 0.75rem
+  .grid &
+    display: flex
+    & > *
+      margin: 0.5rem
+    @each $input in $list
+      & > #{$input}
+        width: 100%
+    & > select
+        width: 100%
+    & > button, .button
+      width: 100%
+      +desktop
+        width: auto
   +desktop
+    flex-direction: row
     justify-content: space-around
     align-items: center
     flex-wrap: wrap
     margin-right: 0
     &.down
-      align-items: flex-end
+      margin-top: 2rem
     label
-      margin-bottom: 0.7rem
       flex-basis: 100%
-      text-align: center
       &.for-radio, &.for-checkbox
-        margin-bottom: 0
         flex-basis: 0

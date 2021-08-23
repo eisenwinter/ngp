@@ -1,0 +1,32 @@
+.tabs
+  display: flex
+  flex-wrap: wrap
+  & > label
+    cursor: pointer
+    display: block
+    padding: 0.5rem
+    order: 1
+    margin-bottom: 0
+    position: relative
+  & .tab
+    flex-grow: 1
+    width: 100%
+    display: none
+    padding: 0.5rem
+    order: 5
+  & input[type='radio']
+    display: none
+  & input[type='radio']:checked
+    & + label
+      color: $primary	
+    & + label + .tab
+      display: block
+  &.outlined 
+    & > label
+      border-left: $default-border
+      border-top: $default-border
+      &:last-of-type
+        border-right: $default-border
+    & > .tab
+      border: $default-border
+//based on https://codepen.io/mikestreety/pen/yVNNNm?q=css+tabs&limit=all&type=type-pens

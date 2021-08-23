@@ -1,0 +1,32 @@
+.burger
+    display: block
+    position: relative
+    margin: 0 auto
+    width: 55px
+    height: 50px
+    @include light-dark-selectors(".line")
+    & .line
+      position: absolute
+      left: 10px
+      height: 3px
+      width: 35px
+      border-radius: 0.35rem
+      display: block
+      transition: 0.5s
+      transform-origin: center
+      &:nth-child(1)
+        top: 12px
+      &:nth-child(2)
+        top: 24px
+      &:nth-child(3)
+        top: 36px
+    &.is-active
+      & .line
+        &:nth-child(1)
+          transform: translateY(12px) + rotate(-45deg)
+        &:nth-child(2)
+          opacity: 0
+        &:nth-child(3)
+          transform: translateY(-12px) + rotate(45deg)
+.nav .burger
+  top: 7px

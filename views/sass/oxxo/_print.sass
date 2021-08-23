@@ -1,0 +1,18 @@
+@media print
+    @page
+        size: A4 landscape
+    .no-print
+        display: none
+    .print-center
+        text-align: center
+    .nav, .aside
+        display: none !important
+    .break-after-always
+        page-break-after: always
+    .break-before-always
+        page-break-before: always
+    .boxed
+        break-inside: avoid
+        background-color: #fff !important
+    .cut-line
+        border: 3px #000 dashed !important
