@@ -8,6 +8,7 @@ import (
 	_ "image/png"
 	"io/ioutil"
 	"net/http"
+	"os"
 	"text/template"
 
 	"github.com/eisenwinter/ngp/pkg/euspec"
@@ -104,9 +105,16 @@ func routes() {
 
 }
 
+func getPortVariable() string {
+	if value, ok := os.LookupEnv("PORT"); ok {
+		return value
+	}
+	return "8080"
+}
+
 func main() {
 	mainTemplate = template.Must(template.ParseFiles("./views/index.html"))
 	errorTemplate = template.Must(template.ParseFiles("./views/error.html"))
 	routes()
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(fmt.Sprintf(":%s", getPortVariable()), nil)
 }

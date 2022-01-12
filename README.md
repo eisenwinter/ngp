@@ -27,12 +27,6 @@ Q: Is this a official?
 
 A: No there is no affiliation with any authorities. This is a hobby project.
 
-
-Q: Can this validate my vaccination certificate?
-
-A: No. Validation is only possible for the issuing authority. For more information regarding the progress check https://github.com/ehn-dcc-development/hcert-spec/blob/main/README.md
-
-
 Q: Will the generated vaccination certificate (ngp) be accepted?
 
 A: In theory even the QR code alone should be enough. Your mileage may vary.
@@ -87,4 +81,4 @@ https://github.com/ehn-dcc-development/ehn-dcc-schema/tree/main/valuesets
 
 # License
 
-BSD Clause 2
+BSD 2-Clause License
